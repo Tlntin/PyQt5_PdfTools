@@ -159,7 +159,7 @@ class ZipPng(QThread):
         long_png_path = path.join(b, 'page_{}.png')
         if not path.exists(c):  # 如果c不存在
             mkdir(c)
-        long_zip_png = path.join(c, 'page_{}.png')
+        long_zip_png = path.join(c, 'page_{}.jpg')
         long_png_list = listdir(b)  # 计算未压缩的长图路径里面的图片数量
         long_png_list.sort(key=lambda m: int(m[5: len(m) - 4]))  # 文件排序
         long_png_0 = path.join(b, long_png_list[0])  # 第一张长图完整路径
