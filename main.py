@@ -202,8 +202,8 @@ V1.0版更新记录：
         file_name0 = path.split(self.file_path)[1]
         file_name = path.splitext(file_name0)[0]  # 获取文件名
         self.show_process_bar('正在压缩长图, 请稍后')
-        print(file_name, float(self.line_value) / 100, self.png_type)
-        self.my_dialog3 = ZipPng(file_name, float(self.line_value) / 100, self.png_type)
+#         print(file_name, float(self.line_value), self.png_type)
+        self.my_dialog3 = ZipPng(file_name, float(self.line_value), self.png_type)
         self.my_dialog3.start()
         self.my_dialog3.trigger.connect(self.process_pdf2png)  # 连接处理压缩进度函数，可以和之前的长图一样的
 
