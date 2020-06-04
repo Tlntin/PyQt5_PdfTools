@@ -205,7 +205,6 @@ class GenLongPng2(QThread):
             if n1 <= self.png_column:
                 new_width = width * n1 + (n1 - 1) * self.png_interval
                 new_height = height
-            # 如果只有一列
             else:
                 rows = ceil(n1 / self.png_column)  # 计算总行数
                 new_width = width * self.png_column + (self.png_column - 1) * self.png_interval
@@ -296,9 +295,4 @@ class ZipPng(QThread):
 
 
 if __name__ == '__main__':
-    # g = GenLongPng2(5, 1, 10, "C:/Users/www/Desktop/期权波动率开工/导出图片", "C:/Users/www/Desktop/期权波动率开工/矩阵长图")
-    # g.run()
-    z1 = ZipPng('普通', 'jpg', 92, "C:/Users/www/Desktop/期权波动率开工/导出图片")
-    z2 = ZipPng('普通', 'jpg', 92, 'C:/Users/www/Desktop/期权波动率开工/单列长图')
-    z2.run()
     pass
