@@ -48,6 +48,8 @@ pip -r requirements.txt
 - tools.py   主要为pdf与图片操作的后端源代码，核心所在
 - tools.png  主程序菜单栏的图标，不可删除
 - ui.py  UI设计界面
+- test.py 用于将图片转base64二进制码
+- tools_png.py 利用图片转成的py文件，里面存了一个base64字节码，main程序调用的时候会自动释放用来生成图片。
 ```
 
 ## 软件打包
@@ -58,9 +60,6 @@ pip -r requirements.txt
 pyinstaller -i png.ico -F -w main.py
 ```
 
-## 不算bug的bug
-
-- 打包后的程序需要和tools.png放到一起，不然菜单栏图标会消失，后期看看怎么解决
 
 ## 其它建议
 
